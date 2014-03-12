@@ -1,0 +1,52 @@
+{% block point_widget %}
+    {% spaceless %}
+    <input type="hidden" id="{{ id }}" name="{{ full_name }}" value="{{ value }}" />
+    <div id="map_{{ id }}" style="height: 400px"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    {% endspaceless %}<script>
+        $(function() {
+            {% if value %}
+                var location = $('#{{ id }}').val().split(/ /);
+            {% else %}
+                var location = [0, 0];
+            {% endif %}
+            var map = new google.maps.Map($('#map_{{ id }}')[0], {
+                center: new google.maps.LatLng(location[0], location[1]),
+                zoom: {% if value %}8{% else %}1{% endif %}
+            });
+            var marker = new google.maps.Marker({
+                {% if value %}map: map,{% endif %}
+                position: new google.maps.LatLng(location[0], location[1]),
+                draggable: true
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: ''
+            });
+            google.maps.event.addListener(map, 'dblclick', function(e) {
+                if (e.latLng && !marker.getMap()) {
+                    infowindow.close();
+                    marker.setPosition(e.latLng);
+                    marker.setMap(map);
+                    $('#{{ id }}').val(e.latLng.lat() + ' ' + e.latLng.lng());
+                }
+            });
+            google.maps.event.addListener(marker, 'dragend', function(e) {
+                infowindow.close();
+                marker.setPosition(e.latLng);
+                $('#{{ id }}').val(e.latLng.lat() + ' ' + e.latLng.lng());
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                var $content = $('<div>').append($('<h5>').text(marker.getPosition()))
+                        .append($('<button>').text('{{ 'link_delete'|trans({}, 'SonataAdminBundle') }}')).append('<br/><br/>');
+                $content.find('button').click(function(e) {
+                    e.preventDefault();
+                    marker.setMap(null);
+                    $('#{{ id }}').val('');
+                    infowindow.close();
+                });
+                infowindow.setContent($content[0]);
+                infowindow.open(map, marker);
+            });
+        });
+    </script>
+{% endblock %}

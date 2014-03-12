@@ -1,0 +1,8 @@
+parameters:
+    looptribe.sonataspatial.form.type.pointclass: Looptribe\SonataSpatialBundle\Form\Type\PointType
+
+services:
+    looptribe.sonataspatial.form.type.point:
+        class: %looptribe.sonataspatial.form.type.pointclass%
+        tags:
+            - { name: form.type, alias: point }
