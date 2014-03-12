@@ -1,0 +1,29 @@
+{
+    "name": "looptribe/sonata-spatial",
+    "description": "Spatial support for Sonata admin with Google Maps",
+    "type": "symfony-bundle",
+    "keywords": ["sonata", "admin", "spatial", "gmaps"],
+    "homepage": "http://github.com/looptribe/sonata-spatial",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Looptribe",
+            "email": "info@looptribe.com",
+            "homepage": "http://www.looptribe.com",
+            "role": "Developer"
+        }],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.3.*",
+        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/doctrine-bundle": "1.2.*",
+        "twig/extensions": "1.0.*",
+        "sonata-project/admin-bundle": "~2.2",
+        "creof/doctrine2-spatial": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Looptribe\\SonataSpatialBundle": "" }
+    },
+    "target-dir": "Looptribe/SonataSpatialBundle",
+    "minimum-stability": "dev"
+}
