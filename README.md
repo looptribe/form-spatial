@@ -8,7 +8,7 @@ This package is a Sonata Admin integration of [djlambert/doctrine2-spatial](http
 
 ## Installation
 ``` bash
-$ php composer.phar require looptribe/spatial-bundle dev-master
+$ php composer.phar require looptribe/sonata-spatial dev-master
 ```
 
 ``` php
