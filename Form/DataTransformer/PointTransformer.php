@@ -1,6 +1,6 @@
 <?php
 
-namespace Looptribe\SonataSpatialBundle\Form\DataTransformer;
+namespace Looptribe\FormSpatialBundle\Form\DataTransformer;
 
 use Symfony\Component\Form\DataTransformerInterface;
 use CrEOF\Spatial\PHP\Types\Geometry\Point;

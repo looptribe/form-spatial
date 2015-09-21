@@ -1,9 +1,9 @@
 {
-    "name": "looptribe/sonata-spatial",
-    "description": "Spatial support for Sonata admin with Google Maps",
+    "name": "looptribe/form-spatial",
+    "description": "Spatial support for Smyonfy2 forms with Google Maps",
     "type": "symfony-bundle",
-    "keywords": ["sonata", "admin", "spatial", "gmaps"],
-    "homepage": "http://github.com/looptribe/sonata-spatial",
+    "keywords": ["form", "admin", "spatial", "gmaps"],
+    "homepage": "http://github.com/looptribe/form-spatial",
     "license": "MIT",
     "authors": [
         {
@@ -15,12 +15,11 @@
     "require": {
         "symfony/form": "~2.2",
         "twig/twig": "~1.12",
-        "sonata-project/admin-bundle": "~2.2",
         "creof/doctrine2-spatial": "dev-master"
     },
     "autoload": {
-        "psr-0": { "Looptribe\\SonataSpatialBundle": "" }
+        "psr-0": { "Looptribe\\FormSpatialBundle": "" }
     },
-    "target-dir": "Looptribe/SonataSpatialBundle",
+    "target-dir": "Looptribe/FormSpatialBundle",
     "minimum-stability": "dev"
 }

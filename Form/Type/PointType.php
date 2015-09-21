@@ -1,10 +1,10 @@
 <?php
 
-namespace Looptribe\SonataSpatialBundle\Form\Type;
+namespace Looptribe\FormSpatialBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Looptribe\SonataSpatialBundle\Form\DataTransformer\PointTransformer;
+use Looptribe\FormSpatialBundle\Form\DataTransformer\PointTransformer;
 
 class PointType extends AbstractType
 {

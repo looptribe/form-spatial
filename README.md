@@ -1,14 +1,14 @@
-Sonata Spatial Bundle
+Form Spatial Bundle
 ========================================================
 
-Spatial support for Sonata Admin with Google Maps
+Spatial support for Symfony2 forms with Google Maps
 
-This package is a Sonata Admin integration of [djlambert/doctrine2-spatial](https://github.com/djlambert/doctrine2-spatial).
+This package is a Symfony2 forms integration of [djlambert/doctrine2-spatial](https://github.com/djlambert/doctrine2-spatial).
 
 
 ## Installation
 ``` bash
-$ php composer.phar require looptribe/sonata-spatial dev-master
+$ php composer.phar require looptribe/form-spatial dev-master
 ```
 
 ``` php
@@ -19,28 +19,25 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Looptribe\SonataSpatialBundle\LooptribeSonataSpatialBundle(),
+        new Looptribe\FormSpatialBundle\LooptribeFormSpatialBundle(),
         // ...
     );
 }
 ```
 
 ## Usage
-Simply add to your Sonata admin class
+When you create a form simply add the correct field type:
 ``` php
-// src/Looptribe/MyBundle/Admin/FooAdmin.php
 
 <?php
-
-// Fields to be shown on create/edit forms
-protected function configureFormFields(FormMapper $formMapper)
-{
-    $formMapper
-        // ...
-        ->add('location', 'point')
-        // ...
-    ;
-}
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+            // ...
+            ->add('location', 'point')
+            // ...
+        ;
+    }
 ```
 
 ## Development

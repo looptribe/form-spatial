@@ -1,6 +1,6 @@
 <?php
 
-namespace Looptribe\SonataSpatialBundle\DependencyInjection;
+namespace Looptribe\FormSpatialBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class LooptribeSonataSpatialExtension extends Extension implements PrependExtensionInterface
+class LooptribeFormSpatialExtension extends Extension implements PrependExtensionInterface
 {
     /**
      * {@inheritDoc}
@@ -28,7 +28,7 @@ class LooptribeSonataSpatialExtension extends Extension implements PrependExtens
     {
         $container->prependExtensionConfig('twig', array(
             'form' => array(
-                'resources' => array('LooptribeSonataSpatialBundle:Form:fields.html.twig')
+                'resources' => array('LooptribeFormSpatialBundle:Form:fields.html.twig')
             )
         ));
     }

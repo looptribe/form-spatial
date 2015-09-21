@@ -37,7 +37,7 @@
             });
             google.maps.event.addListener(marker, 'click', function() {
                 var $content = $('<div>').append($('<h5>').text(marker.getPosition()))
-                        .append($('<button>').text('{{ 'link_delete'|trans({}, 'SonataAdminBundle') }}')).append('<br/><br/>');
+                        .append($('<button>').text('{{ 'link_delete'|trans({}, 'FormAdminBundle') }}')).append('<br/><br/>');
                 $content.find('button').click(function(e) {
                     e.preventDefault();
                     marker.setMap(null);
