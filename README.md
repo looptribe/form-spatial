@@ -5,7 +5,8 @@ Spatial support for Symfony2 forms with Google Maps.
 
 [![Package version](https://img.shields.io/packagist/vpre/looptribe/form-spatial.svg?style=flat-square)](https://packagist.org/packages/looptribe/form-spatial)
 
-This package is a Symfony2 forms integration of [djlambert/doctrine2-spatial](https://github.com/djlambert/doctrine2-spatial).
+This package is a Symfony2 forms integration of [ddproxy/doctrine2-spatial](https://github.com/ddproxy/doctrine2-spatial).
+It adds a new form type `point` to edit spatial `Point` types with Google Maps.
 
 
 ## Installation
@@ -28,7 +29,7 @@ public function registerBundles()
 ```
 
 ## Usage
-When you create a form simply add the correct field type:
+When you create a form set your Point field type as `'point'`:
 ``` php
 
 <?php
@@ -43,4 +44,4 @@ When you create a form simply add the correct field type:
 ```
 
 ## Development
-At the moment only the Point type is supported.
+At the moment only the `Point` type is supported.
