@@ -1,6 +1,6 @@
 {
     "name": "looptribe/form-spatial",
-    "description": "Spatial support for Smyonfy2 forms with Google Maps",
+    "description": "Spatial support for Symfony2 forms with Google Maps",
     "type": "symfony-bundle",
     "keywords": ["form", "admin", "spatial", "gmaps"],
     "homepage": "http://github.com/looptribe/form-spatial",
