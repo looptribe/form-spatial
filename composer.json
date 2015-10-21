@@ -15,7 +15,7 @@
     "require": {
         "symfony/form": "~2.2",
         "twig/twig": "~1.12",
-        "ddproxy/doctrine2-spatial": "dev-master"
+        "creof/doctrine2-spatial": "dev-master"
     },
     "autoload": {
         "psr-0": { "Looptribe\\FormSpatialBundle": "" }
