@@ -27,7 +27,7 @@ class LooptribeFormSpatialExtension extends Extension implements PrependExtensio
     public function prepend(ContainerBuilder $container)
     {
         $container->prependExtensionConfig('twig', array(
-            'form' => array(
+            'form_theme' => array(
                 'resources' => array('LooptribeFormSpatialBundle:Form:fields.html.twig')
             )
         ));
