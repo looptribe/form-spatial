@@ -13,8 +13,8 @@
             "role": "Developer"
         }],
     "require": {
-        "symfony/form": "~2.2",
-        "twig/twig": "~1.12",
+        "symfony/form": ">=2.2",
+        "twig/twig": ">=1.12",
         "creof/doctrine2-spatial": "dev-master"
     },
     "autoload": {
