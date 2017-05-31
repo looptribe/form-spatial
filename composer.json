@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "symfony/form": "^3.2",
+        "symfony/form": ">=2.8",
         "twig/twig": "^1.12||^2.0",
         "creof/doctrine2-spatial": "^1.1"
     },
