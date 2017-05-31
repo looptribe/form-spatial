@@ -29,7 +29,7 @@ public function registerBundles()
 ```
 
 ## Usage
-When you create a form set your Point field type as `'point'`:
+When you create a form set your Point field type as `Looptribe\FormSpatialBundle\Form\Type\PointType`:
 ``` php
 
 <?php
@@ -37,11 +37,11 @@ When you create a form set your Point field type as `'point'`:
     {
         $builder
             // ...
-            ->add('location', 'point')
+            ->add('location', Looptribe\FormSpatialBundle\Form\Type\PointType::class)
             // ...
         ;
     }
 ```
 
 ## Development
-At the moment only the `Point` type is supported.
+At the moment only the geography `Point` type is supported.
