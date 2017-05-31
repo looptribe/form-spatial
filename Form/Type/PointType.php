@@ -2,13 +2,12 @@
 
 namespace Looptribe\FormSpatialBundle\Form\Type;
 
+use Looptribe\FormSpatialBundle\Form\DataTransformer\PointTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Looptribe\FormSpatialBundle\Form\DataTransformer\PointTransformer;
 
 class PointType extends AbstractType
 {
-    
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->addModelTransformer(new PointTransformer());
@@ -23,5 +22,4 @@ class PointType extends AbstractType
     {
         return 'point';
     }
-
 }

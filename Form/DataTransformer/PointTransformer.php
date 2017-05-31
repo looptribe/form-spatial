@@ -2,15 +2,16 @@
 
 namespace Looptribe\FormSpatialBundle\Form\DataTransformer;
 
-use Symfony\Component\Form\DataTransformerInterface;
 use CrEOF\Spatial\PHP\Types\Geometry\Point;
+use Symfony\Component\Form\DataTransformerInterface;
 
 class PointTransformer implements DataTransformerInterface
 {
     /**
      * Transforms a Point to a string "lat lng".
      *
-     * @param  Point|null $point
+     * @param Point|null $point
+     *
      * @return string
      */
     public function transform($point)
@@ -25,7 +26,7 @@ class PointTransformer implements DataTransformerInterface
     /**
      * Transforms a string "lat lng" to a Point.
      *
-     * @param  string $number
+     * @param string $number
      *
      * @return Point|null
      */
@@ -36,7 +37,7 @@ class PointTransformer implements DataTransformerInterface
         }
 
         list($lat, $lng) = explode(' ', $string, 2);
-        
+
         return new Point($lng, $lat);
     }
 }
