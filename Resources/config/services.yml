@@ -3,6 +3,7 @@ parameters:
 
 services:
     looptribe.formspatial.form.type.point:
-        class: %looptribe.formspatial.form.type.pointclass%
+        class: "%looptribe.formspatial.form.type.pointclass%"
+        arguments: ["%looptribe.formspatial.google_maps_api_key%"]
         tags:
             - { name: form.type, alias: point }

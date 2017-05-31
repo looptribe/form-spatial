@@ -28,10 +28,15 @@ public function registerBundles()
 }
 ```
 
+``` yml
+# app/config/parameters.yml
+parameters:
+    looptribe.formspatial.google_maps_api_key: YOUR_API_KEY
+```
+
 ## Usage
 When you create a form set your Point field type as `Looptribe\FormSpatialBundle\Form\Type\PointType`:
 ``` php
-
 <?php
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
