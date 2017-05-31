@@ -11,15 +11,14 @@
             "email": "info@looptribe.com",
             "homepage": "http://www.looptribe.com",
             "role": "Developer"
-        }],
+        }
+    ],
     "require": {
-        "symfony/form": "~2.2",
-        "twig/twig": "~1.12",
-        "creof/doctrine2-spatial": "dev-master"
+        "symfony/form": ">=2.8",
+        "twig/twig": "^1.12||^2.0",
+        "creof/doctrine2-spatial": "^1.1"
     },
     "autoload": {
-        "psr-0": { "Looptribe\\FormSpatialBundle": "" }
-    },
-    "target-dir": "Looptribe/FormSpatialBundle",
-    "minimum-stability": "dev"
+        "psr-4": { "Looptribe\\FormSpatialBundle\\": "" }
+    }
 }

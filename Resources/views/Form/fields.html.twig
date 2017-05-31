@@ -2,7 +2,7 @@
     {% spaceless %}
     <input type="hidden" id="{{ id }}" name="{{ full_name }}" value="{{ value }}" />
     <div id="map_{{ id }}" style="height: 400px"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}"></script>
     {% endspaceless %}<script>
         (function() {
             {% if value %}
