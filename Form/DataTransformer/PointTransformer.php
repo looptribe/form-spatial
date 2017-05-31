@@ -2,7 +2,7 @@
 
 namespace Looptribe\FormSpatialBundle\Form\DataTransformer;
 
-use CrEOF\Spatial\PHP\Types\Geometry\Point;
+use CrEOF\Spatial\PHP\Types\Geography\Point;
 use Symfony\Component\Form\DataTransformerInterface;
 
 class PointTransformer implements DataTransformerInterface
